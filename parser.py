@@ -3,7 +3,6 @@ from bs4 import BeautifulSoup
 import pandas as pd
 import matplotlib.pyplot as plt
 
-vacancies = {}
 
 urls = [
     'https://career.habr.com/vacancies?locations[]=c_715&locations[]=c_678&page=1&q=%D0%B0%D0%BD%D0%B0%D0%BB%D0%B8%D1%82%D0%B8%D0%BA%D0%B0%20%D0%B4%D0%B0%D0%BD%D0%BD%D1%8B%D1%85&type=all',
@@ -21,6 +20,7 @@ urls = [
 
 headers = {"user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0"}
 
+vacancies = {}
 res = {}
 senior = []
 middle = []
