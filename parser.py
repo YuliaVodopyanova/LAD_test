@@ -35,9 +35,7 @@ for url in urls:
         soup = BeautifulSoup(response.text, 'html.parser')
 
         vacancy = soup.find_all('div', {'class': 'vacancy-card__inner'})
-        # print(l)
         for i in vacancy:
-            # n = i.find('a', class_='vacancies-list-item__title').get('href')
             name = i.find('div', class_="vacancy-card__title").text
             additional_info = i.find('div', class_="vacancy-card__skills").text
             vacancies[name] = additional_info
